@@ -68,6 +68,7 @@ header {
 header nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 2.5rem 2rem;
   font-size: 1.5rem;
 }
@@ -91,6 +92,9 @@ header nav ul {
 
 #mobile-menu {
   z-index: 8;
+}
+#mobile-menu i {
+  font-size: 2.5rem;
 }
 
 header nav ul.active {
