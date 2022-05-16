@@ -47,7 +47,21 @@ img {
 
 .cta {
   padding: 0.8rem 1.5rem;
+  display: inline-block;
+  min-width: max-content;
   border-radius: 0.8rem;
+}
+.text-linear-blue {
+  color: var(--white);
+}
+
+.text-linear-blue {
+  background: var(--lg2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
 }
 
 .bg-linear-blue {
