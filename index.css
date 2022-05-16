@@ -151,6 +151,10 @@ form {
   box-shadow: 0 0.6rem 1.3rem rgba(103, 136, 255, 0.09);
 }
 
+footer {
+  font-size: 1.3rem;
+}
+
 @media screen and (min-width: 640px) {
   header nav {
     font-size: 1.8rem;
@@ -179,5 +183,11 @@ form {
   }
   .gs {
     font-size: 1.7rem;
+  }
+  p.lead {
+    font-size: 1.8rem !important;
+  }
+  footer {
+    font-size: 1.8rem;
   }
 }
