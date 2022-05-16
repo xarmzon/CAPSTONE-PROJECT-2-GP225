@@ -1,0 +1,132 @@
+:root {
+  --primary-color: #0e0743;
+  --primary-color-trans: #0e0743b5;
+  --primary-bg: #11011e;
+  --secondary-color: #47061b;
+  --blue: #554ab2;
+  --blue2: #5d85de;
+  --blue3: #cfc9fc;
+  --white: #fefefe;
+  --lg1: linear-gradient(89.59deg, #6788ff 22.6%, #c5ffe5 78.98%);
+  --lg2: linear-gradient(
+    96.18deg,
+    rgba(103, 136, 255, 0.69) 9.89%,
+    rgba(85, 74, 179, 0.69) 91.83%
+  );
+  --lg3: linear-gradient(90.15deg, #981664 35.4%, #f1275a 83.54%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  font-family: "poppins", sans-serif;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+body {
+  background: url("images/shad_desktop.png");
+  background-color: var(--primary-color);
+  color: var(--white);
+  min-height: 100vh;
+  width: 100%;
+}
+
+a {
+  color: var(--white);
+}
+img {
+  max-width: 100%;
+}
+
+.cta {
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.8rem;
+}
+
+.bg-linear-blue {
+  background: var(--lg2);
+}
+.bg-linear-red {
+  background: var(--lg3);
+}
+
+header {
+  width: 100%;
+  min-height: 50vh;
+  background: url("images/bg-hero1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 2rem;
+  font-size: 1.5rem;
+}
+
+header nav ul {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 5;
+  background: linear-gradient(var(--primary-color-trans) 85%, transparent);
+  backdrop-filter: blur(0.4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  transition: top 0.6s ease-in-out;
+}
+
+#mobile-menu {
+  z-index: 8;
+}
+
+header nav ul.active {
+  top: 0;
+}
+
+header nav ul li {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+header nav ul li a.cta {
+  display: block;
+  margin: 0.2rem auto auto;
+  width: 80%;
+}
+
+@media screen and (min-width: 640px) {
+  header nav {
+    font-size: 1.8rem;
+  }
+  header nav ul {
+    position: relative;
+    inset: unset;
+    z-index: unset;
+    width: auto;
+    background: transparent;
+    backdrop-filter: unset;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 0;
+  }
+  header nav ul li {
+    margin-right: 1rem;
+  }
+  #mobile-menu {
+    display: none;
+  }
+}

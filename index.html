@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAPSTONE PROJECT - FRONTEND - 2 - GROUP 225</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="" class="logo">GROUP 225</a>
+        <ul class="">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="" class="cta bg-linear-blue">Login</a></li>
+          <li><a href="" class="cta bg-linear-red">Signup</a></li>
+        </ul>
+        <div id="mobile-menu">
+          <i class="bi bi-list"></i>
+        </div>
+      </nav>
+      <section>
+        <div class="contents">
+          <h1><span>Take control</span> of your payments today.</h1>
+          <p>
+            Make instant payments in the most urgent conditions, and even in the
+            comfort of your home.
+          </p>
+          <a href="#getstarted" class="cta bg-linear-red">Get Started</a>
+        </div>
+        <div class="image">
+          <img src="images/cube_img.png" alt="cube image" />
+        </div>
+      </section>
+    </header>
+    <main id="getstarted">
+      <form action="">
+        <div>
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="tel" name="phone" id="phone" required />
+        </div>
+        <div>
+          <label for="pass">Password</label>
+          <input type="password" name="pass" id="pass" required />
+        </div>
+        <div>
+          <label for="cpass">Confirm Password</label>
+          <input type="password" name="cpass" id="cpass" required />
+        </div>
+        <div>
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
