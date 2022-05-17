@@ -60,7 +60,7 @@
     </header>
     <main id="getstarted">
       <form action="" class="">
-        <div class="alert d-none"></div>
+        <div class="alert d-none" role="alert"></div>
         <div class="row gap-4">
           <div class="col-12">
             <label for="username" class="form-label fs-4">Username</label>
@@ -70,7 +70,10 @@
               name="username"
               id="username"
               required
+              data-pattern="^[a-zA-Z_]\w{2,14}$"
+              data-msg="Invalid Username entered, minimum of 3 and maximum of 15"
             />
+            <span class="error"></span>
           </div>
           <div>
             <label class="form-label fs-4" for="email">Email</label>
@@ -80,7 +83,10 @@
               name="email"
               id="email"
               required
+              data-pattern="^[a-zA-Z_\.]\w{2,}@\w{3,}\.\w{2,6}"
+              data-msg="Invalid email entered"
             />
+            <span class="error"></span>
           </div>
           <div>
             <label class="form-label fs-4" for="phone">Phone Number</label>
@@ -89,8 +95,11 @@
               type="tel"
               name="phone"
               id="phone"
+              data-pattern="^0[345789][01]\d{8}$"
+              data-msg="Invalid Nigeria phone entered"
               required
             />
+            <span class="error"></span>
           </div>
           <div>
             <label class="form-label fs-4" for="pass">Password</label>
@@ -99,8 +108,11 @@
               type="password"
               name="pass"
               id="pass"
+              data-pattern="^[a-zA-Z]\w{5,14}$"
+              data-msg="Invalid password entered, minimum of 6 characters and maximum of 15 starting with a letter"
               required
             />
+            <span class="error"></span>
           </div>
           <div>
             <label class="form-label fs-4" for="cpass">Confirm Password</label>
@@ -109,8 +121,10 @@
               type="password"
               name="cpass"
               id="cpass"
+              data-msg="Password does not match"
               required
             />
+            <span class="error"></span>
           </div>
           <div class="d-flex justify-content-center">
             <input

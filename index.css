@@ -152,6 +152,12 @@ form {
   box-shadow: 0 0.6rem 1.3rem rgba(103, 136, 255, 0.09);
 }
 
+span.error {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: rgb(197, 89, 89);
+}
+
 footer {
   font-size: 1.3rem;
 }
