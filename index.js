@@ -4,7 +4,21 @@ const navItems = document.querySelector("nav ul");
 const form = document.forms[0];
 const alertBox = document.querySelector("div.alert");
 const inputs = document.querySelectorAll("form input.form-control");
+const passwordIcon = document.querySelector(".pass i");
 
+passwordIcon.addEventListener("click", (e) => {
+  const el = e.currentTarget;
+  const pass = document.querySelector("input[name='pass']");
+  if (el.classList.contains("bi-eye-slash")) {
+    pass.type = "text";
+    el.classList.remove("bi-eye-slash");
+    el.classList.add("bi-eye");
+  } else {
+    pass.type = "password";
+    el.classList.add("bi-eye-slash");
+    el.classList.remove("bi-eye");
+  }
+});
 mobileMenu.addEventListener("click", () => {
   navItems.classList.toggle("active");
   if (icon.classList.contains("bi-list")) {
@@ -18,7 +32,6 @@ mobileMenu.addEventListener("click", () => {
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  alertBox.classList.remove("d-none");
 
   inputs.forEach((inp) => {
     validateInput(inp);
@@ -26,9 +39,11 @@ form.addEventListener("submit", function (e) {
 
   const errors = [];
   inputs.forEach((inp, i) => {
-    errors[i] = inp.nextElementSibling.innerHTML.length > 0;
+    const err = inp.nextElementSibling.innerHTML.length > 0;
+    errors[i] = err;
   });
 
+  alertBox.classList.remove("d-none");
   const hasErrors = errors.some((i) => i);
   if (hasErrors) {
     alertBox.classList.remove("alert-success");
