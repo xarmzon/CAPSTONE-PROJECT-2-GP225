@@ -152,6 +152,24 @@ form {
   box-shadow: 0 0.6rem 1.3rem rgba(103, 136, 255, 0.09);
 }
 
+div.pass {
+  position: relative;
+}
+
+div.pass i {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 0.3rem);
+  right: 1.8rem;
+  z-index: 5;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 span.error {
   display: inline-block;
   margin-top: 0.3rem;
